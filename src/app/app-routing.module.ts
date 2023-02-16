@@ -12,16 +12,8 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'card',
-    loadChildren: () => import('./pages/page-card/page-card.module').then(m => m.PageCardModule)
-  },
-  {
-    path: 'tab',
-    loadChildren: () => import('./pages/page-tab/page-tab.module').then(m => m.PageTabModule)
-  },
-  {
-    path: 'accordion',
-    loadChildren: () => import('./pages/page-accordion/page-accordion.module').then(m => m.PageAccordionModule)
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
   }
 ];
 
