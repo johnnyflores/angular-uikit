@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-3">
+            <app-accordion-simple 
+                [cardHeader]="'User Information'"
+                [content]="userListTemp"
+                [primaryText]="'Add User'"
+                (onPrimary)="addUser()"></app-accordion-simple>
+            <ng-template #userListTemp>
+                <div class="row" *ngIf="isOpen">
+                    <div class="col-md-12">
+                        <p>Body</p>
+                        <button class="btn btn-primary" (click)="closeUser()">Close</button>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

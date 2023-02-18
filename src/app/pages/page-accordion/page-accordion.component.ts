@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PRODUCTS } from 'src/data';
 
 @Component({
   selector: 'app-page-accordion',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-accordion.component.scss']
 })
 export class PageAccordionComponent {
+
+  products = PRODUCTS;
 
 }

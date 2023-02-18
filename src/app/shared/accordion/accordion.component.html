@@ -1,0 +1,25 @@
+<div class="accordion" id="accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" [id]="'heading'+data.id">
+        <a
+            class="accordion-button"
+            role="button"
+            data-bs-toggle="collapse"
+            [href]="'#collapse'+data.id"
+            aria-expanded="true"
+            [attr.aria-controls]="'collapse'+data.id">
+            {{data.title}}
+        </a>
+      </h2>
+      <div
+        [id]="'collapse'+data.id"
+        class="accordion-collapse collapse"
+        [attr.aria-labelledby]="'heading'+data.id"
+        data-bs-parent="#accordion">
+        <div class="accordion-body">
+            {{data.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,1 +1,20 @@
-<p>page-accordion works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div 
+                class="panel-group"
+                id="accordion"
+                role="tablist"
+                aria-multiselectable="true">
+                <app-accordion 
+                    *ngFor="let data of products" 
+                    [data]="data" 
+                    class="panel panel-default">
+                </app-accordion>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

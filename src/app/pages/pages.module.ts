@@ -9,6 +9,7 @@ import { PageTabComponent } from "./page-tab/page-tab.component";
 import { PagesRoutingModule } from "./pages-routing.module";
 import { PagesComponent } from "./pages.component";
 import { PageButtonComponent } from './page-button/page-button.component';
+import { PageAccordionSimpleComponent } from './page-accordion-simple/page-accordion-simple.component';
 
 @NgModule({
     declarations: [
@@ -16,7 +17,8 @@ import { PageButtonComponent } from './page-button/page-button.component';
         PageCardComponent,
         PageAccordionComponent,
         PageTabComponent,
-        PageButtonComponent
+        PageButtonComponent,
+        PageAccordionSimpleComponent
     ],
     imports: [
         RouterModule,

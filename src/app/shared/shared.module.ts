@@ -5,12 +5,16 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CardComponent } from './card/card.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ButtonComponent } from './button/button.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.component';
 
 @NgModule({
     declarations: [
         CardComponent,
         TabsComponent,
-        ButtonComponent
+        ButtonComponent,
+        AccordionComponent,
+        AccordionSimpleComponent
   ],
     imports: [
         CommonModule,
@@ -19,6 +23,8 @@ import { ButtonComponent } from './button/button.component';
         CardComponent,
         TabsComponent,
         ButtonComponent,
+        AccordionComponent,
+        AccordionSimpleComponent,
         CommonModule,
         FormsModule,
         TranslateModule
