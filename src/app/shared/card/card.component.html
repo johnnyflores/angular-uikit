@@ -1,0 +1,10 @@
+<div class="card h-100">
+  <img class="card-img-top" [alt]="alt" [src]="imageUrl" (error)="onImgError($event)">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+  </div>
+  <div class="card-footer">
+    <a [href]="href" class="btn btn-primary">{{button}}</a>
+  </div>
+</div>

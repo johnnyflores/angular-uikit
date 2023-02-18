@@ -1,1 +1,15 @@
-<p>page-card works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 py-3" *ngFor="let product of products">
+            <app-card
+                [alt]="product.title"
+                [src]="product.thumbnailUrl"
+                (error) ="onImgError($event)"
+                [title]="product.title"
+                [description]="product.description"
+                [href]="product.url"
+                button="View"
+            ></app-card>
+        </div>
+    </div>
+</div>
