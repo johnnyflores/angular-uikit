@@ -1,1 +1,18 @@
-<p>page-tab works!</p>
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-12 ">
+            <app-tabs [tabsArray]="tabs" (OnTabChange)="tabChange($event)"></app-tabs>
+        </div>
+    </div>
+    <div class="row my-4">
+        <div class="col-md-12" *ngIf="activatedTabIndex == 0">
+            <p>This is Register Panel</p>
+        </div>
+        <div class="col-md-12" *ngIf="activatedTabIndex == 1">
+            <p>This is Details Panel</p>
+        </div>
+        <div class="col-md-12" *ngIf="activatedTabIndex == 2">
+            <p>This is Contact Panel</p>
+        </div>
+    </div>
+</div>

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class PageTabComponent {
 
+  tabs: string[] = ['Register', 'Details', 'Contact']
+  activatedTabIndex: number = 0;
+
+  tabChange(tabIndex: number) {
+    this.activatedTabIndex = tabIndex;
+  }
+
 }

@@ -8,13 +8,15 @@ import { PageTabComponent } from "./page-tab/page-tab.component";
 
 import { PagesRoutingModule } from "./pages-routing.module";
 import { PagesComponent } from "./pages.component";
+import { PageButtonComponent } from './page-button/page-button.component';
 
 @NgModule({
     declarations: [
         PagesComponent,
         PageCardComponent,
         PageAccordionComponent,
-        PageTabComponent
+        PageTabComponent,
+        PageButtonComponent
     ],
     imports: [
         RouterModule,

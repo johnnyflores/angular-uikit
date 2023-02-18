@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { PageAccordionComponent } from "./page-accordion/page-accordion.component";
+import { PageButtonComponent } from "./page-button/page-button.component";
 import { PageCardComponent } from "./page-card/page-card.component";
 import { PageTabComponent } from "./page-tab/page-tab.component";
 import { PagesComponent } from "./pages.component";
@@ -21,6 +22,10 @@ const routes: Routes = [
             {
                 path: 'tab',
                 component: PageTabComponent
+            },
+            {
+                path: 'button',
+                component: PageButtonComponent
             }
         ]
     }
