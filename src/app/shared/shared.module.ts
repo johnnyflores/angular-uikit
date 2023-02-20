@@ -9,6 +9,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.component';
 import { TableComponent } from './table/table.component';
 import { ReadmoreComponent } from './readmore/readmore.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { ReadmoreComponent } from './readmore/readmore.component';
         AccordionComponent,
         AccordionSimpleComponent,
         TableComponent,
-        ReadmoreComponent
+        ReadmoreComponent,
+        LoadingSpinnerComponent
   ],
     imports: [
         CommonModule,
@@ -32,6 +34,7 @@ import { ReadmoreComponent } from './readmore/readmore.component';
         AccordionSimpleComponent,
         TableComponent,
         ReadmoreComponent,
+        LoadingSpinnerComponent,
         CommonModule,
         FormsModule,
         TranslateModule

@@ -4,6 +4,7 @@ import { PageAccordionSimpleComponent } from "./page-accordion-simple/page-accor
 import { PageAccordionComponent } from "./page-accordion/page-accordion.component";
 import { PageButtonComponent } from "./page-button/page-button.component";
 import { PageCardComponent } from "./page-card/page-card.component";
+import { PageLoadingComponent } from "./page-loading/page-loading.component";
 import { PageReadmoreComponent } from "./page-readmore/page-readmore.component";
 import { PageTabComponent } from "./page-tab/page-tab.component";
 import { PageTableComponent } from "./page-table/page-table.component";
@@ -42,6 +43,10 @@ const routes: Routes = [
             {
                 path: 'readmore',
                 component: PageReadmoreComponent
+            },
+            {
+                path: 'loading',
+                component: PageLoadingComponent
             }
         ]
     }
