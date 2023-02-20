@@ -5,6 +5,7 @@ import { PageAccordionComponent } from "./page-accordion/page-accordion.componen
 import { PageButtonComponent } from "./page-button/page-button.component";
 import { PageCardComponent } from "./page-card/page-card.component";
 import { PageTabComponent } from "./page-tab/page-tab.component";
+import { PageTableComponent } from "./page-table/page-table.component";
 import { PagesComponent } from "./pages.component";
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
             {
                 path: 'button',
                 component: PageButtonComponent
+            },
+            {
+                path: 'table',
+                component: PageTableComponent
             }
         ]
     }

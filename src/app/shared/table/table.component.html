@@ -1,0 +1,29 @@
+<table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th scope="col" *ngFor="let head of headArray">{{head.Head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of bodyArray; let id = index">
+        <td>{{id + 1}}</td>
+        <td *ngFor="let head of headArray">
+            <div *ngIf="head.FieldName != ''">
+                {{item[head.FieldName]}}
+            </div>
+            <div *ngIf="head.FieldName == ''" class="d-flex justify-content-between">
+                <button 
+                    class="btn btn-primary"
+                    (click)="OnEdit(item)">
+                    Edit
+                </button>
+                <button 
+                    class="btn btn-danger"
+                    (click)="OnDelete(item)">
+                    Delete
+                </button>
+            </div>
+        </td>
+    </tbody>
+</table>

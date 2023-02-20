@@ -7,6 +7,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { ButtonComponent } from './button/button.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.co
         TabsComponent,
         ButtonComponent,
         AccordionComponent,
-        AccordionSimpleComponent
+        AccordionSimpleComponent,
+        TableComponent
   ],
     imports: [
         CommonModule,
@@ -25,6 +27,7 @@ import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.co
         ButtonComponent,
         AccordionComponent,
         AccordionSimpleComponent,
+        TableComponent,
         CommonModule,
         FormsModule,
         TranslateModule
