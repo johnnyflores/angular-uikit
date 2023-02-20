@@ -1,0 +1,11 @@
+<span *ngIf="text.length <= wordLimit">{{text}}</span>
+
+<span *ngIf="text.length > wordLimit && !readMore">
+    {{text.substring(0,wordLimit)}}...
+    <span (click)="readMore = true" class="fw-bold text-primary cursor">{{'READ.More' | translate}}</span>
+</span>
+
+<span *ngIf="text.length > wordLimit && readMore">
+    {{text}}
+    <span (click)="readMore = false" class="fw-bold text-primary cursor">{{'READ.Less' | translate}}</span>
+</span>

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 py-3" *ngFor="let product of products;">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.title}}</h5>
+                    <p class="card-text">
+                        <app-readmore
+                            [text]="product.description"
+                            [wordLimit]="50"
+                        >
+                        </app-readmore>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

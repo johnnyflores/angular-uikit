@@ -8,6 +8,7 @@ import { ButtonComponent } from './button/button.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.component';
 import { TableComponent } from './table/table.component';
+import { ReadmoreComponent } from './readmore/readmore.component';
 
 @NgModule({
     declarations: [
@@ -16,10 +17,12 @@ import { TableComponent } from './table/table.component';
         ButtonComponent,
         AccordionComponent,
         AccordionSimpleComponent,
-        TableComponent
+        TableComponent,
+        ReadmoreComponent
   ],
     imports: [
         CommonModule,
+        TranslateModule,
     ],
     exports: [
         CardComponent,
@@ -28,6 +31,7 @@ import { TableComponent } from './table/table.component';
         AccordionComponent,
         AccordionSimpleComponent,
         TableComponent,
+        ReadmoreComponent,
         CommonModule,
         FormsModule,
         TranslateModule

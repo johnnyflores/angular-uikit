@@ -5,5 +5,9 @@
     },
     "HOME": {
         "Title": "UIKIT Bootstrap 5"
+    },
+    "READ": {
+        "More": "Read more",
+        "Less": "Read less"
     }
 }

@@ -11,6 +11,7 @@ import { PagesComponent } from "./pages.component";
 import { PageButtonComponent } from './page-button/page-button.component';
 import { PageAccordionSimpleComponent } from './page-accordion-simple/page-accordion-simple.component';
 import { PageTableComponent } from './page-table/page-table.component';
+import { PageReadmoreComponent } from './page-readmore/page-readmore.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { PageTableComponent } from './page-table/page-table.component';
         PageTabComponent,
         PageButtonComponent,
         PageAccordionSimpleComponent,
-        PageTableComponent
+        PageTableComponent,
+        PageReadmoreComponent
     ],
     imports: [
         RouterModule,
