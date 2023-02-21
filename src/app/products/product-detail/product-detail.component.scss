@@ -1,0 +1,6 @@
+.dropdown-toggle.open {
+    + .dropdown-menu {
+        display: block;
+        margin-top: 40px;
+    }
+}

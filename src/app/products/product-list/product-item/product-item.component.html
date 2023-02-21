@@ -1,0 +1,19 @@
+<li class="list-group-item mb-2">
+    <a
+    style="cursor: pointer;"
+    (click)="onSelectProduct()">
+    <div class="product-list">
+        <div class="product-list__left">
+            <h4>{{product.name}}</h4>
+            <p>{{product.description}}</p>
+        </div>
+        <div class="product-list__right">
+          <img [src]="product.imageUrl" alt="{{product.name}}" class="img-fluid" >
+        </div>
+    </div>
+</a>
+
+</li>
+
+
+

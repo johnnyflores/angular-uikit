@@ -1,0 +1,12 @@
+.product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__right {
+      img {
+        max-height: 250px;
+      }
+    }
+  }
+  

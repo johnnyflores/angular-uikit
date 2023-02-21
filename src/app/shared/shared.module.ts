@@ -10,6 +10,7 @@ import { AccordionSimpleComponent } from './accordion-simple/accordion-simple.co
 import { TableComponent } from './table/table.component';
 import { ReadmoreComponent } from './readmore/readmore.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { DropdownDirective } from './directive/dropdown.directive';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
         AccordionSimpleComponent,
         TableComponent,
         ReadmoreComponent,
-        LoadingSpinnerComponent
+        LoadingSpinnerComponent,
+        DropdownDirective,
   ],
     imports: [
         CommonModule,
@@ -35,6 +37,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
         TableComponent,
         ReadmoreComponent,
         LoadingSpinnerComponent,
+        DropdownDirective,
         CommonModule,
         FormsModule,
         TranslateModule
