@@ -8,8 +8,7 @@
         <ul class="list-group">
             <app-product-item
                 *ngFor="let productElement of products"
-                [product]="productElement"
-                (productSelected)="onProductSelected(productElement)">
+                [product]="productElement">
             </app-product-item>
         </ul>
     </div>

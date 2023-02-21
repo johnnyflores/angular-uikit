@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
@@ -9,19 +9,12 @@ import { ProductService } from '../product.service';
 })
 export class ProductListComponent implements OnInit{
 
-  @Output()
-  productWasSelected = new EventEmitter<Product>();
-
   products!: Product[];
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
-  }
-
-  onProductSelected(product: Product) {
-    this.productWasSelected.emit(product);
   }
 
 }
