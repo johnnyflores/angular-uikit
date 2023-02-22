@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core.module';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -33,6 +34,7 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    CoreModule,
     SharedModule
   ],
   providers: [],

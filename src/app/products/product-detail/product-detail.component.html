@@ -13,13 +13,20 @@
                             >Manage Product<span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" style="cursor: pointer;">To Shopping List</a></li>
+                            <li><a class="dropdown-item" style="cursor: pointer;" (click)="addShoppingList()">Shopping List</a></li>
                             <li><a class="dropdown-item" style="cursor: pointer;">Edit Product</a></li>
                             <li><a class="dropdown-item" style="cursor: pointer;">Delete Product</a></li>
                         </ul>
                     </div>
                 </div>
                 <p class="card-text">{{product.description}}</p>
+            </div>
+            <div class="card-footer">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let accessory of product.accessories">
+                      {{accessory.name}} - {{accessory.amount}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

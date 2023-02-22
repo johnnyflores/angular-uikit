@@ -1,0 +1,16 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-12">
+      <app-shopping-edit></app-shopping-edit>
+      <ul class="list-group">
+        <a
+          class="list-group-item"
+          style="cursor:pointer;"
+          *ngFor="let accessory of accessories"
+        >
+          {{accessory.name}} - ({{accessory.amount}})
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
