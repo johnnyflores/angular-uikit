@@ -4,13 +4,7 @@
             <app-product-list></app-product-list>
         </div>
         <div class="col-md-7">
-            <app-product-detail 
-                *ngIf="selectedProduct; else showText"
-                [product]="selectedProduct">
-            </app-product-detail>
-            <ng-template #showText>
-                <h2>Please select a Product!</h2>
-            </ng-template>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

@@ -7,8 +7,9 @@
     <div class="col-md-12">
         <ul class="list-group">
             <app-product-item
-                *ngFor="let productElement of products"
-                [product]="productElement">
+                *ngFor="let productElement of products; let i = index"
+                [product]="productElement"
+                [index]="i">
             </app-product-item>
         </ul>
     </div>

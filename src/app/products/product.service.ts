@@ -27,6 +27,10 @@ export class ProductService {
         return this.products.slice();
     }
 
+    getProduct(index: number) {
+        return this.products[index];
+    }
+
     addAccessoryShoppingList(accessories: Accessory[]) {
         this.shoppingService.addAccessories(accessories);
     }

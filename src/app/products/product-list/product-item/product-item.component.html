@@ -1,7 +1,5 @@
-<li class="list-group-item mb-2">
-    <a
-        style="cursor: pointer;"
-        (click)="onSelectProduct()">
+<li class="list-group-item mb-2" [routerLink]="[index]" routerLinkActive="active">
+    <a style="cursor: pointer;">
         <div class="product-list">
             <div class="product-list__left">
                 <h4>{{product.name}}</h4>
@@ -13,6 +11,3 @@
         </div>
     </a>
 </li>
-
-
-

@@ -7,13 +7,15 @@ import { ProductsComponent } from "./products.component";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductItemComponent } from './product-list/product-item/product-item.component';
+import { ProductStartComponent } from './product-start/product-start.component';
 
 @NgModule({
     declarations: [
         ProductsComponent,
         ProductDetailComponent,
         ProductListComponent,
-        ProductItemComponent
+        ProductItemComponent,
+        ProductStartComponent
     ],
     imports: [
         RouterModule,
