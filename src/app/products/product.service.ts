@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 import { Accessory } from "../shared/accessory.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Product } from "./product.model";
@@ -7,8 +7,6 @@ import { Product } from "./product.model";
     providedIn:'root'
 })
 export class ProductService {
-
-    productSelected = new EventEmitter<Product>();
 
     private products: Product[] = [
         new Product(
