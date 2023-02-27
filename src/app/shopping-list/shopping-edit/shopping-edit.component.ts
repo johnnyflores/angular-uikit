@@ -1,4 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Subscription } from 'rxjs';
 import { Accessory } from 'src/app/shared/accessory.model';
 import { ShoppingListService } from '../shopping-list.service';
 
@@ -7,21 +9,56 @@ import { ShoppingListService } from '../shopping-list.service';
   templateUrl: './shopping-edit.component.html',
   styleUrls: ['./shopping-edit.component.scss']
 })
-export class ShoppingEditComponent {
+export class ShoppingEditComponent implements OnInit, OnDestroy {
 
-  @ViewChild('nameInput')
-  nameInputRef!: ElementRef;
+  @ViewChild('f')
+  shoppingForm!: NgForm;
 
-  @ViewChild('amountInput')
-  amountInputRef!: ElementRef;
+  subscription!: Subscription;
+  editMode: boolean =false;
+  editedItemIndex!: number;
+  editedItem!: Accessory;
 
-  constructor(private slService: ShoppingListService) {}
+  constructor(private shoppingService: ShoppingListService) {}
 
-  onAddItem() {
-    const name = this.nameInputRef.nativeElement.value;
-    const amount = this.amountInputRef.nativeElement.value;
-    const newAccessory = new Accessory(name,amount);
-    this.slService.addAccessory(newAccessory);
+  ngOnInit(): void {
+    this.subscription = this.shoppingService.startedEditing.subscribe(
+      (index: number) => {
+        this.editedItemIndex = index;
+        this.editMode = true;
+        this.editedItem = this.shoppingService.getAccessory(index);
+        this.shoppingForm.setValue({
+          name:this.editedItem.name,
+          amount: this.editedItem.amount
+        })
+      }
+    )
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();    
+  }
+
+  onSubmit(form: NgForm) {
+    const value = form.value;
+    const newAccessory = new Accessory(value.name, value.amount);
+    if (this.editMode) {
+      this.shoppingService.updateAccessory(this.editedItemIndex, newAccessory)
+
+    } else {
+      this.shoppingService.addAccessory(newAccessory);
+    }
+    this.editMode = false;
+    form.reset();
+  }
+
+  onClear() {
+    this.shoppingForm.reset();
+    this.editMode = false;
+  }
+
+  onDelete() {
+    this.shoppingService.deleteAccessory(this.editedItemIndex);
+    this.onClear();
+  }
 }

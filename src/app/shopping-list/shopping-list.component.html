@@ -6,7 +6,8 @@
         <a
           class="list-group-item"
           style="cursor:pointer;"
-          *ngFor="let accessory of accessories"
+          *ngFor="let accessory of accessories; let i = index"
+          (click)="onEditItem(i)"
         >
           {{accessory.name}} - ({{accessory.amount}})
         </a>
