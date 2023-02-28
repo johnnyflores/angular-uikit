@@ -7,18 +7,18 @@
                         type="submit"
                         class="btn btn-success"
                         [disabled]="!productForm.valid"
-                    >Save</button>
+                    >{{'BUTTON.Save' | translate}}</button>
                     <button
                         type="button"
                         class="btn btn-danger"
                         (click)="onCancel()"
-                    >Cancel</button>
+                    >{{'BUTTON.Cancel' | translate}}</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">{{'FORM.Name' | translate}}</label>
                         <input
                             type="text"
                             id="name"
@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="imageUrl">Image Url</label>
+                        <label for="imageUrl">{{'FORM.Image' | translate}}</label>
                         <input
                             type="text"
                             id="imageUrl"
@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description">{{'FORM.Description' | translate}}</label>
                         <textarea
                             type="text"
                             id="description"
@@ -95,7 +95,7 @@
                                 type="button"
                                 class="btn btn-success"
                                 (click)="addAccessory()"
-                            >Add Accessory</button>
+                            >{{'BUTTON.Add' | translate}}</button>
                         </div>
                     </div>
                 </div>

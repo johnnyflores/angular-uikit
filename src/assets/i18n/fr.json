@@ -10,5 +10,19 @@
     "READ": {
         "More": "Lire plus",
         "Less": "Lire moins"
+    },
+    "BUTTON": {
+        "New": "Nouveau Produit",
+        "Save": "Sauvegarder",
+        "Cancel": "Annuler",
+        "Add": "Ajouter Accessoire",
+        "Delete": "Supprimer",
+        "Clear": "Effacer"
+    },
+    "FORM": {
+        "Name": "Nom",
+        "Image": "Image Url",
+        "Description": "Description",
+        "Amount": "Quantité"
     }
 }
