@@ -1,0 +1,8 @@
+::ng-deep .form-control:focus {
+    box-shadow: none !important;
+}
+
+::ng-deep input.ng-invalid.ng-touched,
+::ng-deep textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

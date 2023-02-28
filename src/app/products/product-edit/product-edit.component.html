@@ -1,1 +1,105 @@
-<p>product-edit works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-12">
+                    <button
+                        type="submit"
+                        class="btn btn-success"
+                        [disabled]="!productForm.valid"
+                    >Save</button>
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        (click)="onCancel()"
+                    >Cancel</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            formControlName="name"
+                            class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="imageUrl">Image Url</label>
+                        <input
+                            type="text"
+                            id="imageUrl"
+                            formControlName="imageUrl"
+                            class="form-control"
+                            #imageUrl
+                            >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img [src]="imageUrl.value" class="img-fluid">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea
+                            type="text"
+                            id="description"
+                            class="form-control"
+                            formControlName="description"
+                            rows="6">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" formArrayName="accessories">
+                    <div
+                        class="row"
+                        style="margin-top: 10px;"
+                        *ngFor="let accessoryCtrl of controls; let i = index"
+                        [formGroupName]="i">
+                        <div class="col-md-8">
+                            <input
+                                type="text"
+                                class="form-control"
+                                formControlName="name">
+                        </div>
+                        <div class="col-md-2">
+                            <input
+                                type="number"
+                                class="form-control"
+                                formControlName="amount">
+                        </div>
+                        <div class="col-md-2">
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                (click)="onDeleteAccessory(i)">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button
+                                type="button"
+                                class="btn btn-success"
+                                (click)="addAccessory()"
+                            >Add Accessory</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

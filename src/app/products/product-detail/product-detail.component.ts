@@ -35,4 +35,9 @@ export class ProductDetailComponent implements OnInit{
 
   }
 
+  onDeleteProduct() {
+    this.productService.deleteProduct(this.id);
+    this.router.navigate(['/products']);
+  }
+
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { TranslateModule } from '@ngx-translate/core';
 import { CardComponent } from './card/card.component';
 import { TabsComponent } from './tabs/tabs.component';
@@ -27,6 +27,8 @@ import { DropdownDirective } from './directive/dropdown.directive';
     imports: [
         CommonModule,
         TranslateModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         CardComponent,

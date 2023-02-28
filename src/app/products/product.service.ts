@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 import { Accessory } from "../shared/accessory.model";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Product } from "./product.model";
@@ -7,6 +8,8 @@ import { Product } from "./product.model";
     providedIn:'root'
 })
 export class ProductService {
+
+    productsChanged = new Subject<Product[]>();
 
     private products: Product[] = [
         new Product(
@@ -31,6 +34,21 @@ export class ProductService {
 
     addAccessoryShoppingList(accessories: Accessory[]) {
         this.shoppingService.addAccessories(accessories);
+    }
+
+    addProduct(product: Product) {
+        this.products.push(product);
+        this.productsChanged.next(this.products.slice());
+    }
+
+    updateProduct(index: number, newProduct: Product) {
+        this.products[index] = newProduct;
+        this.productsChanged.next(this.products.slice());
+    }
+
+    deleteProduct(index: number) {
+        this.products.splice(index, 1);
+        this.productsChanged.next(this.products.slice());
     }
 
 }
