@@ -46,4 +46,19 @@ export class AuthService {
             }));
     }
 
+    login(email: string, password: string) {
+
+        const url = '';
+
+        return this.http
+            .post<AuthResponseData>(
+                url,
+                {
+                    email: email,
+                    password: password,
+                    returnSecureToken: true
+                }
+            );
+    }
+
 }
