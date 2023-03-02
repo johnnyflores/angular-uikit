@@ -1,3 +1,5 @@
+@import "abstracts/functions";
+
 .lang {
     .active {
         display: none;
@@ -8,3 +10,10 @@
         padding-right: 0px !important;
     }
 }
+
+a {
+    font-size: rem(14px);
+    font-weight: fontweight(normal);
+    color: color(secondary);
+}
+

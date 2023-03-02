@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "abstracts/mixins";
+@import "abstracts/colors";
+@import "abstracts/functions";
+
+:root {
+    --color-primary: #0d6efd;
+    --color-secondary: #6c757d;
+    --color-dark: #212529;
+    --color-danger: #dc3545;
+    --color-white: #fff;
+    --fontweight-bold: 900;
+    --fontweight-normal: 500;
+}
