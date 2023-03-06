@@ -28,27 +28,22 @@ export class DataStorageService {
     fetchProducts() {
         const url = '';
 
-        return this.authService.user.pipe(
-            take(1),
-            exhaustMap(user => {
-                return this.http.get<Product[]>(
-                    url,
-                    {
-                        params: new HttpParams().set('auth', user.token)
-                    }
-                )
-            }),
-            map(products => {
-                return products.map(product => {
-                    return {
-                        ...product,
-                        accessories: product.accessories ? product.accessories : []
-                    }
+        return this.http
+            .get<Product[]>(
+                url
+            )
+            .pipe(
+                map(products => {
+                    return products.map(product => {
+                        return {
+                            ...product,
+                            accessories: product.accessories ? product.accessories : []
+                        }
+                    })
                 })
-            })
-            ,tap(products => {
-                this.productService.setProducts(products)
-            })
-        )
+                ,tap(products => {
+                    this.productService.setProducts(products)
+                })
+            )
     }
 }
