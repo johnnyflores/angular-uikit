@@ -16,10 +16,10 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/home">{{'HEADER.Home' | translate}}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isAuthenticated">
           <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/auth">Authentication</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAuthenticated">
           <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/products">{{'HEADER.Products' | translate}}</a>
         </li>
         <li class="nav-item">
@@ -27,7 +27,10 @@
         </li>
       </ul>
       <ul class="navbar-nav navbar-right ml-auto align-items-center">
-        <li class="nav-item dropdown">
+        <li class="nav-item" *ngIf="isAuthenticated">
+          <a class="nav-link" style="cursor: pointer;">Logout</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="!isAuthenticated">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -47,7 +50,7 @@
             <li><a class="dropdown-item" routerLink="/pages/loading">Loading</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" *ngIf="isAuthenticated">
           <a
             class="nav-link dropdown-toggle"
             href="#"
