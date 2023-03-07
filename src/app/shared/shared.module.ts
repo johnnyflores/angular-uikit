@@ -11,6 +11,7 @@ import { TableComponent } from './table/table.component';
 import { ReadmoreComponent } from './readmore/readmore.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { DropdownDirective } from './directive/dropdown.directive';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { DropdownDirective } from './directive/dropdown.directive';
         ReadmoreComponent,
         LoadingSpinnerComponent,
         DropdownDirective,
+        AlertComponent,
   ],
     imports: [
         CommonModule,
@@ -39,6 +41,7 @@ import { DropdownDirective } from './directive/dropdown.directive';
         TableComponent,
         ReadmoreComponent,
         LoadingSpinnerComponent,
+        AlertComponent,
         DropdownDirective,
         CommonModule,
         FormsModule,
