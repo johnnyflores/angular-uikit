@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { BehaviorSubject, catchError, Subject, tap, throwError } from "rxjs";
+import { environment } from "src/environments/environment";
 import { User } from "./user.model";
 
 export interface AuthResponseData {
@@ -26,7 +27,7 @@ export class AuthService {
 
     signup(email: string, password: string) {
 
-        const url = '';
+        const url = '' + environment.APIKey;
 
         return this.http
             .post<AuthResponseData>(
@@ -52,7 +53,7 @@ export class AuthService {
 
     login(email: string, password: string) {
 
-        const url = '';
+        const url = '' + environment.APIKey;
 
         return this.http
             .post<AuthResponseData>(
